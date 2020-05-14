@@ -9,7 +9,7 @@
 
   position: absolute;
   display: block;
-  top: 1080px;
+  top: 1280px;
   left: 0;
   width: 100%;
   max-height: 1920px;
@@ -75,7 +75,7 @@
 
 .btn-secondary {
   position: absolute;
-  right: 15%;
+  right: 9%;
   top: 10%;
   height: 40px;
   width: 100px;
@@ -97,8 +97,14 @@
   color: white;
 }
 
-#section3 {
+#btn3 {
   position: absolute;
   top: 10%;
-  right: 20%;
+  right: 21%;
+}
+
+#btn4 {
+  position: absolute;
+  top: 10%;
+  right: 15%;
 }
