@@ -42,8 +42,18 @@ a {
     cursive;
   color: #555;
   font-size: 2rem;
+  line-height: 4rem;
 }
 
 .nav-link {
   text-decoration: none;
+}
+
+/* mat-nav-list ul {
+  display: flex;
+  justify-content: center;
+} */
+.mat-drawer-inner-container {
+  justify-content: center;
+  display: flex;
 }

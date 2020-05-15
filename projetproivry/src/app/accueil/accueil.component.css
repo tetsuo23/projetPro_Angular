@@ -234,6 +234,11 @@ a:active {
   background: transparent;
 }
 
+.mat-drawer-inner-container {
+  justify-content: center;
+  display: flex;
+}
+
 @media(max-width: 959px) {
   .mat-toolbar {
     border-radius: 0px;
