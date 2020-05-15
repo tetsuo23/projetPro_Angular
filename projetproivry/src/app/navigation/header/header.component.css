@@ -1,0 +1,17 @@
+.mat-toolbar {
+  border-radius: 3px;
+  background: transparent;
+}
+
+.mat-icon-button {
+  top: 70%;
+}
+
+.material-icons {
+  font-size: 3rem;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  width: 25%;
+}

@@ -1,0 +1,49 @@
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+}
+
+.nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+}
+
+.nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+}
+
+.mat-drawer-backdrop.mat-drawer-shown {
+  background-color: #fffd;
+}
+
+mat-nav-list ul {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  font-family: 'Special Elite',
+    cursive;
+  color: #555;
+  font-size: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+}
