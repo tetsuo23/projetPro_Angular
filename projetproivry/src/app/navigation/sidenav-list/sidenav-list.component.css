@@ -30,18 +30,27 @@ a:active {
 
 .mat-drawer-backdrop.mat-drawer-shown {
   background-color: #fffd;
+  overflow-y: hidden;
 }
 
 mat-nav-list ul {
   display: flex;
   flex-direction: column;
+
 }
+
+.mat-nav-list {
+  padding-top: 50px;
+  padding-left: 25px;
+}
+
+
 
 a {
   font-family: 'Special Elite',
     cursive;
   color: #555;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 4rem;
 }
 
@@ -56,4 +65,5 @@ a {
 .mat-drawer-inner-container {
   justify-content: center;
   display: flex;
+  overflow: hidden;
 }

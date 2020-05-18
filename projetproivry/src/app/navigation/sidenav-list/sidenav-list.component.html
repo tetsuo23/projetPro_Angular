@@ -12,20 +12,23 @@
 
     <h1>Festival du film d'Ivry</h1>
   </div>
-
+  <div>
+    <h2>Les entreprises rencontrent le 7ème art... </h2>
+  </div>
 
   <div class="navlist">
 
     <ul>
-      <a class="nav-link active" (click)="onSidenavClose()">Active</a>
-      <a class="nav-link" (click)="onSidenavClose()">Home</a>
-      <a class="nav-link" (click)="onSidenavClose()">A propos</a>
-      <a class="nav-link" (click)="onSidenavClose()">Films en compétiton</a>
+
+      <a class="nav-link" (click)="onSidenavClose()" (click)="to2()">Home</a>
+      <a class="nav-link" (click)="onSidenavClose()" (click)="to3()">A propos</a>
+      <a class="nav-link" (click)="onSidenavClose()" (click)="to4()">Films en compétiton</a>
       <a class="nav-link" (click)="onSidenavClose()">Réalisateurs</a>
       <a class="nav-link" (click)="onSidenavClose()">Entreprises</a>
       <a class="nav-link" (click)="onSidenavClose()">Actualités</a>
       <a class="nav-link" (click)="onSidenavClose()">Agenda</a>
       <a class="nav-link" (click)="onSidenavClose()">Contact</a>
+      <a class="nav-link active" (click)="onSidenavClose()">Active</a>
     </ul>
 
   </div>

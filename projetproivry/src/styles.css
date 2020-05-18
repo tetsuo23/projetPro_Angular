@@ -24,6 +24,23 @@ body {
 }
 
 .mat-drawer-inner-container {
-  justify-content: center;
-  display: flex;
+  overflow: hidden;
+}
+
+.mat-typography h1 {
+  font-family: Exo 2;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.mat-typography h2 {
+  font-family: 'Montserrat',
+    sans-serif;
+
+  font-size: 1rem;
+}
+
+.navlist {
+  margin-top: 25%;
 }
