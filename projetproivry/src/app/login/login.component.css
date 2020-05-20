@@ -1,0 +1,13 @@
+.mat-card {
+  height: 250px
+}
+
+.mat-card-content {
+  display: block;
+  margin-bottom: 16px;
+  height: 55%;
+}
+
+form {
+  height: 100%;
+}

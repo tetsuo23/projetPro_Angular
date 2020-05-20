@@ -11,9 +11,6 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 export class AccueilComponent implements OnInit {
   @ViewChild('section1') section1: ElementRef;
 
-  // onScroll(): void {
-  //   this.section1.nativeElement.scrollTo({ left: (this.section1.nativeElement.scrollLeft + 150), behavior: 'smooth' });
-  // }
 
   constructor() { }
 

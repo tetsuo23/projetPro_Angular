@@ -1,19 +1,28 @@
 <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
 
-  <mat-card class="box">
+  <mat-card class="box col-12">
     <mat-card-header>
       <mat-card-title>Log in</mat-card-title>
+      <div class="col-2 offset-8 col-md-2">
+        <button class="btn btn-secondary" [routerLink]="['/']">
+          <img src="../../assets/img/cross.png" alt="" srcset="../../assets/img/cross.png 1x">
+        </button>
+      </div>
     </mat-card-header>
 
     <form class="example-form">
       <mat-card-content>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Username">
-        </mat-form-field>
+        <div class="col-12">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Username">
+          </mat-form-field>
+        </div>
 
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Password">
-        </mat-form-field>
+        <div class="col-12">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password">
+          </mat-form-field>
+        </div>
       </mat-card-content>
       <button mat-stroked-button color="accent" class="btn-block">Log in</button>
     </form>
