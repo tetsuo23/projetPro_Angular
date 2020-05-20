@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { trigger, transition, animate, style } from '@angular/animations';
-
+import { AngularMaterialModule } from './../angular-material.module';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 @Component({
   selector: 'app-accueil',
   templateUrl: './accueil.component.html',
