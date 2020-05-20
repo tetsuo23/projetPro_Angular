@@ -24,7 +24,7 @@ body {
 }
 
 .mat-drawer-inner-container {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .mat-typography h1 {
@@ -35,12 +35,24 @@ body {
 }
 
 .mat-typography h2 {
-  font-family: 'Montserrat',
-    sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 99;
+}
 
-  font-size: 1rem;
+.mat-typography h3 {
+  font-family: 'Montserrat', sans-serif;
+  z-index: 99;
+
 }
 
 .navlist {
   margin-top: 25%;
+}
+
+.container section .content {
+  max-width: 80%;
+}
+
+.container section .content p {
+  left: 60px
 }

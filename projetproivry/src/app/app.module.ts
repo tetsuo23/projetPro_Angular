@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     LandingComponent,
     AccueilComponent,
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

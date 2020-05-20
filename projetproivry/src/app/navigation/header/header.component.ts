@@ -8,6 +8,14 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Output() public sidenavToggle = new EventEmitter();
+  @Output()
+  private _loginToggle = new EventEmitter();
+  public get loginToggle() {
+    return this._loginToggle;
+  }
+  public set loginToggle(value) {
+    this._loginToggle = value;
+  }
 
   constructor() { }
 
@@ -16,6 +24,9 @@ export class HeaderComponent implements OnInit {
 
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();
+  }
+  public onToggleLogin = () => {
+    this.loginToggle.emit();
   }
 
 }

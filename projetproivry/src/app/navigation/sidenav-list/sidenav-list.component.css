@@ -29,7 +29,7 @@ a:active {
 }
 
 .mat-drawer-backdrop.mat-drawer-shown {
-  background-color: #fffd;
+  background-color: #fff;
   overflow-y: hidden;
 }
 
@@ -51,7 +51,7 @@ a {
     cursive;
   color: #555;
   font-size: 1.5rem;
-  line-height: 4rem;
+  line-height: 3rem;
 }
 
 .nav-link {
@@ -63,7 +63,8 @@ a {
   justify-content: center;
 } */
 .mat-drawer-inner-container {
-  justify-content: center;
+  /* justify-content: center; */
   display: flex;
-  overflow: hidden;
+  overflow-y: hidden !important;
+  height: 100%;
 }

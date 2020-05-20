@@ -1,6 +1,7 @@
 .mat-toolbar {
   border-radius: 3px;
   background: transparent;
+
 }
 
 .mat-icon-button {
@@ -14,4 +15,16 @@
 .mat-toolbar-row,
 .mat-toolbar-single-row {
   width: 25%;
+  padding: 16%;
+  padding-left: 0;
+}
+
+button {
+  background: none;
+  border: none;
+
+}
+
+.login {
+  width: 65px;
 }
