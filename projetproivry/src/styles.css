@@ -23,9 +23,7 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.mat-drawer-inner-container {
-  overflow: hidden !important;
-}
+
 
 .mat-typography h1 {
   font-family: Exo 2;
@@ -37,6 +35,7 @@ body {
 .mat-typography h2 {
   font-family: 'Montserrat', sans-serif;
   z-index: 99;
+
 }
 
 .mat-typography h3 {
@@ -55,4 +54,12 @@ body {
 
 .container section .content p {
   left: 60px
+}
+
+@media screen and (min-width:1281px) {
+  .mat-typography h2 {}
+
+  .mat-drawer-inner-container {
+    overflow: hidden !important;
+  }
 }
