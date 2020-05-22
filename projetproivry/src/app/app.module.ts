@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './angular-material.module';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
@@ -19,6 +20,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { BoardParticipantComponent } from './board-participant/board-participant.component';
+import { BoardJuryComponent } from './board-jury/board-jury.component';
+
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,10 @@ import { MatListModule } from '@angular/material/list';
     HeaderComponent,
     SidenavListComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    BoardAdminComponent,
+    BoardParticipantComponent,
+    BoardJuryComponent
   ],
   imports: [
     BrowserModule,
@@ -43,9 +52,11 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule,
+
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

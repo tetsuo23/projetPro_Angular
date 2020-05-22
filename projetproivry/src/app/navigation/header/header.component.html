@@ -1,20 +1,46 @@
 <mat-toolbar>
   <div class="row">
     <div class="col-1">
-      <div class="col-12">
+      <div class="col-12" routerLinkActive="active">
         <div>
           <button (click)="onToggleSidenav()">
             <mat-icon>menu</mat-icon>
           </button>
-
         </div>
+        <!-- <li class="nav-item" *ngIf="showAdminBoard">
+          <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+        </li>
+        <li class="nav-item" *ngIf="showParticipantBoard">
+          <a href="/mod" class="nav-link" routerLink="mod">Participant Board</a>
+        </li>
+        <li class="nav-item">
+          <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+        </li> -->
+
+        <div class="col-12" *ngIf="!isLoggedIn">
+          <div>
+            <button mat-icon-button class="login" routerLink="connexion">
+              <img src="./../../../assets/login.png" class="img-fluid" alt="" srcset="">
+            </button></div>
+          <div>
+            <button mat-icon-button class="login2" routerLink="register">
+              <img src="./../../../assets/login_in-128.png" class="img-fluid" alt="" srcset="">
+            </button></div>
+        </div>
+
+
+        <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+          <li class="nav-item">
+            <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+          </li>
+          <li class="nav-item">
+            <a href class="nav-link" (click)="logout()">LogOut</a>
+          </li>
+        </ul>
       </div>
-      <div class="col-12">
-        <div>
-          <button mat-icon-button class="login" routerLink="connexion">
-            <img src="./../../../assets/login.png" class="img-fluid" alt="" srcset="">
-          </button></div>
-      </div>
+
+
+
     </div>
   </div>
   <!-- <div>

@@ -1,0 +1,16 @@
+img {
+  width: 30%;
+}
+
+.card-body card {
+  width: 45vw;
+}
+
+label {
+  font-family: play;
+  font-size: 1.2rem;
+}
+
+.card {
+  background-color: #eaeaea
+}

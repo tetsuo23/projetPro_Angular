@@ -25,6 +25,21 @@ form {
 img {
   vertical-align: middle;
   border-style: none;
-  width: 100%;
+  width: 15%;
   height: 100%;
+}
+
+/* ------------ nouveau formulaire ------------------- */
+
+.card-body card {
+  width: 65vw;
+}
+
+label {
+  font-family: play;
+  font-size: 1.2rem;
+}
+
+.card {
+  background-color: #eaeaea
 }
