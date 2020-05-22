@@ -15,21 +15,49 @@
 .mat-toolbar-row,
 .mat-toolbar-single-row {
   width: 25%;
-  padding: 9%;
+  padding: 15%;
   padding-left: 0;
+  white-space: normal;
 }
 
 button {
   background: none;
   border: none;
-
+  transition: 1s ease-in-out;
 }
 
 .login {
   width: 65px;
+  margin-bottom: 35px;
 }
 
 .login2 {
-  width: 65px;
-  margin-top: 50%
+  width: 50px;
+
+}
+
+/* .login3 {
+  background-color: #eaeaea;
+  color: #7a3e33;
+  
+  border-radius: 10%;
+} */
+.btn-secondary {
+  background-color: rgb(152, 153, 153);
+  border-radius: 10%;
+  box-shadow: -25px 25px 15px #333;
+  transition: .5s ease-in-out;
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.btn-secondary:hover {
+  background-color: #2C6D7A;
+  border: none;
+  box-shadow: -15px 15px 15px white;
+  transition: .3s ease-in-out
+}
+
+a {
+  color: #7a3e33;
 }

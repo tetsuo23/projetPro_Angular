@@ -1,16 +1,73 @@
-img {
-  width: 30%;
-}
+  #register {
 
-.card-body card {
-  width: 45vw;
-}
+    animation: appear .7s ease-in-out;
+  }
 
-label {
-  font-family: play;
-  font-size: 1.2rem;
-}
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
 
-.card {
-  background-color: #eaeaea
-}
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
+  .login-wrapper {
+    place-content: end !important;
+  }
+
+  .mat-card {
+    height: 250px;
+    background-color: #EAEAEA;
+    box-shadow: -25px 25px 15px #111;
+  }
+
+  .mat-card-content {
+    display: block;
+    margin-bottom: 16px;
+    height: 55%;
+  }
+
+  form {
+    height: 100%;
+  }
+
+  .cross {
+    width: 45%;
+  }
+
+  img {
+    vertical-align: middle;
+    border-style: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ------------ nouveau formulaire ------------------- */
+
+  .card-body card {
+    width: 65vw;
+  }
+
+  label {
+    font-family: play;
+    font-size: 1.2rem;
+  }
+
+  .card {
+    background-color: #eaeaea;
+    position: absolute;
+    width: 60%;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    height: 48vh;
+    padding: 2%;
+  }

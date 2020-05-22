@@ -1,5 +1,145 @@
-<div class="container">
-  <header class="jumbotron">
-    <p>{{ content }}</p>
-  </header>
-</div>
+<div class="container-fluid" id="admin">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="adjust-nav">
+      <div class="row">
+        <div class="col-9 col-lg-9 d-flex justify-content-start">
+          <h2>{{ username }} DASHBOARD</h2>
+        </div>
+        <div class="col-3 col-md-3 d-flex justify-content-end">
+          <button class="btn btn-secondary" [routerLink]="['/']">
+            <img src="../../assets/img/cross.png" alt="" srcset="../../assets/img/cross.png 1x">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="page-wrapper">
+    <div id="wrapper" class="d-flex align-items-center justify-content-center">
+
+      <div id="page-inner">
+        <div class="container d-none d-md-block">
+          <div class="row d-flex justify-content-between">
+            <div class="card col-md-6">
+              <div class="face face1">
+                <div class="content">
+                  <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="post/create">
+                      <img src="../../assets/img/blog2.png">
+                      <h3>Blog</h3>
+                    </a>
+                  </li>
+                </div>
+              </div>
+              <div class="face face2">
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                  <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="post/create">Create blog</a>
+                  </li>
+                </div>
+              </div>
+            </div>
+            <div class="card col-md-6">
+              <div class="face face1">
+                <div class="content">
+                  <li class="nav-item" routerLinkActive="active">
+                    <a href="#" [routerLink]="['/adminPost']">
+
+                      <img src="../../assets/img/blog2.png">
+
+                      <h3>Blog</h3>
+                    </a>
+                  </li>
+                </div>
+              </div>
+              <div class="face face2">
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                  <li class="nav-item" routerLinkActive="active">
+                    <a href="#" [routerLink]="['/adminPost']">Blog list</a>
+                  </li>
+                </div>
+              </div>
+            </div>
+            <div class="card col-md-6">
+              <div class="face face1">
+                <div class="content">
+                  <img src="../../assets/img/comment.png">
+                  <h3>Posts</h3>
+                </div>
+              </div>
+              <div class="face face2">
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                  <li class="nav-item" routerLinkActive="active">
+                    <a href="#" routerLink="users">Posts</a>
+                  </li>
+                </div>
+              </div>
+            </div>
+            <div class="card col-md-6">
+              <div class="face face1">
+                <div class="content">
+                  <img src="../../assets/img/contact.png">
+                  <h3>Contact</h3>
+                </div>
+              </div>
+              <div class="face face2">
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                  <a href="#work">Contact</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="container2  d-xs-block d-md-none">
+          <div class="row">
+            <div class="card2 col-3">
+              <div class="face face1">
+                <div class="content">
+                  <a href="#" [routerLink]="['/adminPost']"><img src="../../assets/img/blog2.png">
+                    <h3>Blog</h3>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+            <div class="card2 col-3">
+              <div class="face face1">
+                <div class="content">
+                  <img src="../../assets/img/blog2.png">
+                  <a href="#" routerLink="post/create">
+                    <h3>Create</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card2 col-3">
+              <div class="face face1">
+                <div class="content">
+                  <img src="../../assets/img/comment.png">
+                  <h3>Posts</h3>
+                </div>
+              </div>
+            </div>
+            <div class="card2 col-3 contact">
+              <div class="face face1">
+                <div class="content">
+                  <img src="../../assets/img/contact2.png">
+                  <h3>Contact</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- <app-post></app-post> -->
+
+      </div>
+      <!-- <app-admin-post></app-admin-post> -->
+      <app-work-in-progress></app-work-in-progress>
+    </div>
+  </div>

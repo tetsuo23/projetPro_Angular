@@ -16,7 +16,9 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  logout() {
+    document.getElementById("mat-side").style.background = '#00000000';
+  }
   onSubmit() {
     this.authService.register(this.form).subscribe(
       data => {

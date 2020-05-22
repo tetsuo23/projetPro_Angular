@@ -6,10 +6,11 @@
 <p class="underline">
   rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
 </p>
+
 <div class="row">
 
 
-  <mat-sidenav-container>
+  <mat-sidenav-container id="mat-side">
     <mat-sidenav #sidenav role="navigation">
       <!--this is a place for us to add side-nav code-->
       <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
@@ -30,10 +31,20 @@
       <a class="nav-link" href="#">Link</a> -->
 
       <router-outlet></router-outlet>
-
+      <div class="row d-flex justify-content-between button">
+        <div class="col-2 offset-7 button ">
+          <button class="btn-secondary" id="real"><a>Vous ètes réalisateur</a></button>
+        </div>
+        <div class="col-2 button">
+          <button class="btn-secondary" id="ent"><a>Vous étes une entreprise</a></button>
+        </div>
+      </div>
     </mat-sidenav-content>
+
   </mat-sidenav-container>
+
 </div>
+
 <div class="container" id="accueil">
 
   <section id="section1">
@@ -126,12 +137,7 @@
 
 
 
-            <div class="col-3 offset-2 button ">
-              <button class="btn-secondary" id="real"><a>Vous ètes réalisateur</a></button>
-            </div>
-            <div class="col-3 offset-3 button">
-              <button class="btn-secondary" id="ent"><a>Vous étes une entreprise</a></button>
-            </div>
+
 
           </div>
         </div>
@@ -147,6 +153,7 @@
     </div>
 
   </section>
+
   <section id="section3">
     <div class="content">
       <h2>Section trois</h2>

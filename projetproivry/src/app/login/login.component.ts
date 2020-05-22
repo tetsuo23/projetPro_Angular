@@ -27,6 +27,9 @@ export class LoginComponent implements OnInit {
     this.loginClose.emit();
 
   }
+  logout() {
+    document.getElementById("mat-side").style.background = '#00000000';
+  }
   onSubmit() {
     this.authService.login(this.form).subscribe(
       data => {

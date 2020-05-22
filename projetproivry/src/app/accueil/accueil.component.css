@@ -24,8 +24,22 @@
 
 #accueil {
   background-color: #2c6d7a;
+  animation: appear .7s ease-in-out;
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 
 .container section {
 
@@ -171,7 +185,7 @@ mat-sidenav-content a {
   left: 10px;
   overflow: hidden;
   background: transparent;
-  width: 50%;
+  width: 100%;
 }
 
 .mat-drawer-backdrop.mat-drawer-shown {
@@ -235,7 +249,7 @@ a:active {
 
 /* ----------------- partie écran accueil ------------------------- */
 #presentation {
-  z-index: 99;
+  /* z-index: 99; */
   position: absolute;
   top: 0%;
   /* control des lignes noires couplé avec le margin-top de #underline */
@@ -311,6 +325,7 @@ p {
 #info {
   height: 20%;
 }
+
 
 
 
@@ -533,6 +548,7 @@ img {
 
 .button {
   height: 70%;
+  width: 85%;
 }
 
 /* ---------------- media queries ----------------------- */

@@ -46,7 +46,10 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.tokenStorageService.signOut();
     window.location.reload();
-  }
 
+  }
+  login() {
+    document.getElementById("mat-side").style.background = '#000000BB';
+  }
 
 }
