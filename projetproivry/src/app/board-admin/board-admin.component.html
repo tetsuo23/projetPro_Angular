@@ -13,15 +13,52 @@
       </div>
     </div>
   </div>
-  <div id="page-wrapper">
+  <div id="page-wrapper" class="d-flex align-items-center justify-content-center">
     <div id="wrapper" class="d-flex align-items-center justify-content-center">
 
       <div id="page-inner">
-        <div class="container d-none d-md-block">
+        <div class="row">
+          <div class="col-6 d-flex justify-content-between">
+            <div class="row">
+              <div class="col-12">
+                <h2>Participants</h2>
+              </div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-4">
+                    <h3>{{ username }}</h3>
+                  </div>
+                  <div class="col-4">
+                    <h3>{{ email }}</h3>
+                  </div>
+                  <div class="col-4">
+                    <h3>{{ roles }}</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 d-flex justify-content-between">
+            <h2>Posts</h2>
+
+            <div class="row" *ngFor=" let post of posts; let i=index">
+              <div class="col-8 d-flex justify-content-between">
+                <h3>{{ post.title }}</h3>
+              </div>
+              <div class="col-4">
+                <!-- <a class="btn btn-danger" (click)="deletePost(post._id,i)">Delete</a><a [routerLink]="['/post', post._id]" class="btn btn-primary">Edit</a> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container d-none d-md-block">
           <div class="row d-flex justify-content-between">
             <div class="card col-md-6">
               <div class="face face1">
-                <div class="content">
+
+                <!-- <div class="content">
                   <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" routerLink="post/create">
                       <img src="../../assets/img/blog2.png">
@@ -37,7 +74,9 @@
                     <a class="nav-link" routerLink="post/create">Create blog</a>
                   </li>
                 </div>
+
               </div>
+
             </div>
             <div class="card col-md-6">
               <div class="face face1">
@@ -93,53 +132,53 @@
             </div>
           </div>
 
-        </div>
-        <div class="container2  d-xs-block d-md-none">
-          <div class="row">
-            <div class="card2 col-3">
-              <div class="face face1">
-                <div class="content">
-                  <a href="#" [routerLink]="['/adminPost']"><img src="../../assets/img/blog2.png">
-                    <h3>Blog</h3>
-                  </a>
+        </div> -->
+      <div class="container2  d-xs-block d-md-none">
+        <div class="row">
+          <div class="card2 col-3">
+            <div class="face face1">
+              <div class="content">
+                <a href="#" [routerLink]="['/adminPost']"><img src="../../assets/img/blog2.png">
+                  <h3>Blog</h3>
+                </a>
 
-                </div>
               </div>
             </div>
-            <div class="card2 col-3">
-              <div class="face face1">
-                <div class="content">
-                  <img src="../../assets/img/blog2.png">
-                  <a href="#" routerLink="post/create">
-                    <h3>Create</h3>
-                  </a>
-                </div>
+          </div>
+          <div class="card2 col-3">
+            <div class="face face1">
+              <div class="content">
+                <img src="../../assets/img/blog2.png">
+                <a href="#" routerLink="post/create">
+                  <h3>Create</h3>
+                </a>
               </div>
             </div>
-            <div class="card2 col-3">
-              <div class="face face1">
-                <div class="content">
-                  <img src="../../assets/img/comment.png">
-                  <h3>Posts</h3>
-                </div>
+          </div>
+          <div class="card2 col-3">
+            <div class="face face1">
+              <div class="content">
+                <img src="../../assets/img/comment.png">
+                <h3>Posts</h3>
               </div>
             </div>
-            <div class="card2 col-3 contact">
-              <div class="face face1">
-                <div class="content">
-                  <img src="../../assets/img/contact2.png">
-                  <h3>Contact</h3>
-                </div>
+          </div>
+          <div class="card2 col-3 contact">
+            <div class="face face1">
+              <div class="content">
+                <img src="../../assets/img/contact2.png">
+                <h3>Contact</h3>
               </div>
             </div>
           </div>
         </div>
-
-
-        <!-- <app-post></app-post> -->
-
       </div>
-      <!-- <app-admin-post></app-admin-post> -->
-      <app-work-in-progress></app-work-in-progress>
+
+
+      <!-- <app-post></app-post> -->
+
     </div>
+    <!-- <app-admin-post></app-admin-post> -->
+    <app-work-in-progress></app-work-in-progress>
   </div>
+</div>

@@ -1,0 +1,77 @@
+#createForm {
+  height: 80vh;
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  background-color: #D9D9D9;
+  font-family: play;
+  color: #333;
+  overflow-y: scroll;
+  animation: appear .75s ease-in-out;
+  z-index: 999;
+}
+
+#form {
+  height: 100%;
+}
+
+.card {
+  width: 90%;
+  height: 90%;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  background-color: #00000033;
+  border: 1px solid black;
+  border-radius: .5%;
+}
+
+label {
+  color: #333 !important;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width:961px) {
+
+  /*  --------- forms -------- */
+  #createForm {
+    height: 80vh;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow: hidden;
+  }
+
+  .btn-secondary {
+    height: 65%;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  #createForm {
+    height: 80vh;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+
+}

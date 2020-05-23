@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { BoardJuryComponent } from './board-jury/board-jury.component';
 import { BoardParticipantComponent } from './board-participant/board-participant.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { PostCreateComponent } from './post-create/post-create.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,8 @@ const routes: Routes = [
   { path: 'jury', component: BoardJuryComponent },
   { path: 'participant', component: BoardParticipantComponent },
   { path: 'admin', component: BoardAdminComponent },
+  { path: 'mod', component: BoardParticipantComponent },
+  { path: 'mod/post/create', component: PostCreateComponent },
 ];
 
 @NgModule({

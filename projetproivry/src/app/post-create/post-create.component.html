@@ -1,0 +1,35 @@
+<div class="container d-flex align-items-center justify-content-center" id="createForm">
+  <div class="card mb-8" style="margin-top: 25px">
+    <div class="container" id="form">
+      <div class="row">
+        <div class="col-xl-9 col-md-9 d-flex justify-content-start">
+          <h3>&lt; h2 &gt; Nouveau blog &lt; /h2 &gt;</h3>
+        </div>
+        <div class="col-3  offset-xl-1 col-md-2">
+          <button class="btn btn-secondary" [routerLink]="['/mod']" (click)='logout()'>
+            <p>Return</p>
+          </button>
+        </div>
+      </div>
+      <form [formGroup]="angForm" (submit)='addPost(title, content)'>
+        <div class="form-group">
+          <label for="title" class="text-info">Titre</label>
+          <input type="text" id="title" class="form-control" formControlName="title" #title placeholder="titre du blog">
+        </div>
+        <div class="form-group">
+          <label for="content" class="text-info">Contenu</label>
+          <textarea class="form-control" id="content" rows="5" formControlName="content" #content></textarea>
+        </div>
+        <!-- <span>{{post.date | date:'dd/MM/yyyy à HH:mm'}}</span> -->
+
+        <a href="" routerLink="/mod"><button type="submit" class="float-right btn btn-warning" style="margin-bottom: 5px" [disabled]="angForm.pristine || angForm.invalid"
+            (click)="addPost(angForm.controls['title'].value, angForm.controls['content'].value)">
+
+            Create post
+
+          </button></a>
+      </form>
+    </div>
+  </div>
+
+</div>

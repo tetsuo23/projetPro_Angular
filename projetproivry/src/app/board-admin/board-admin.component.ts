@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../_services/user.service';
 import { TokenStorageService } from './../_services/token-storage.service';
-
+import Users from './../models/user'
 import User from './../../../../node-js-jwt-auth-mongodb/app/models';
 import { PostService } from '../_services/post.service';
-// import Post from '../models/post';
+import Post from '../models/post';
 import { BoardAdminService } from './../_services/board-admin.service';
 import { Router } from '@angular/router';
 
@@ -15,15 +15,16 @@ import { Router } from '@angular/router';
 })
 export class BoardAdminComponent implements OnInit {
   content = '';
-  private roles: string[];
+  // private roles: string[];
+  public roles: string[];
   isLoggedIn = false;
   username: string;
   email: string;
   password: string;
   role: string;
-  user: string;
+  user: Users[];
   users: User[];
-  // posts: Post[];
+  posts: Post[];
 
   constructor(private userService: UserService, private tokenStorageService: TokenStorageService, private bs: BoardAdminService, private ps: PostService, private router: Router) { }
   // deletePost(id: any, index: number) {
@@ -45,7 +46,7 @@ export class BoardAdminComponent implements OnInit {
     if (this.isLoggedIn) {
       const user = this.tokenStorageService.getUser();
       this.username = user.username;
-
+      this.email = user.email;
       this.password = user.password;
       this.roles = user.roles;
       this.role = user.role;
@@ -55,12 +56,14 @@ export class BoardAdminComponent implements OnInit {
       .getUsers()
       .subscribe((data: User[]) => {
         this.users = data;
+
       });
-    // this.bs
-    //   .getPosts()
-    //   .subscribe((data: Post[]) => {
-    //     this.posts = data;
-    //   });
+
+    this.bs
+      .getPosts()
+      .subscribe((data: Post[]) => {
+        this.posts = data;
+      });
 
   }
 

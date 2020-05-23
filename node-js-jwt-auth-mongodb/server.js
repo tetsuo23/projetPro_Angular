@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dbConfig = require("./app/config/db.config");
-
+const postRoute = require('./app/routes/post.routes');
 const userRoute = require('./app/routes/user.routes');
 const app = express();
 
@@ -23,6 +23,7 @@ app.use(bodyParser.urlencoded({
 const db = require("./app/models");
 const Role = db.role;
 app.use('/users', userRoute);
+app.use('/posts', postRoute);
 
 
 

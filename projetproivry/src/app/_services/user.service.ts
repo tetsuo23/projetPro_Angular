@@ -31,5 +31,11 @@ export class UserService {
       .http
       .get(`${this.uri}`);
   }
+  getUser(): Observable<any> {
+    return this
+      .http
+      .get(`${this.uri}`);
+  }
+
 }
 
