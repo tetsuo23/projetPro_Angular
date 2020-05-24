@@ -13,12 +13,15 @@ export class PostCreateComponent implements OnInit {
   constructor(private fb: FormBuilder, private ps: PostService, private router: Router) {
     this.createForm();
   }
+
   createForm() {
     this.angForm = this.fb.group({
       title: ['', Validators.required],
       content: ['', Validators.required],
+
     });
   }
+
   addPost(title, content) {
     this.ps.addPost(title, content);
     this.router.navigate(['post']);

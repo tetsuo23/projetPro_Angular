@@ -1,0 +1,41 @@
+#editForm {
+  height: 75vh;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #D9D9D9;
+  font-family: play;
+  color: #333;
+  overflow-y: hidden;
+  z-index: 999;
+}
+
+.card-body {
+  background-color: #00000033;
+  border: 1px solid black;
+  height: 75vh;
+  overflow-y: hidden;
+}
+
+label {
+  color: #333 !important;
+}
+
+@media screen and (min-width:961px) {
+  .card-body {
+    height: 75vh;
+  }
+
+  /* #editForm {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 30%);
+  } */
+}
+
+@media screen and (min-width:1280px) {
+  .card-body {
+    height: 55vh;
+  }
+}

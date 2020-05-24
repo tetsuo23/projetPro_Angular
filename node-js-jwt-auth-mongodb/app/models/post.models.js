@@ -11,6 +11,9 @@ let Post = new Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+  update: {
+    type: Date
   }
 }, {
   collection: 'Post'

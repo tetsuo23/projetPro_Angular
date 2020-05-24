@@ -26,6 +26,7 @@ import { BoardJuryComponent } from './board-jury/board-jury.component';
 
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { PostCreateComponent } from './post-create/post-create.component';
+import { PostEditComponent } from './post-edit/post-edit.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PostCreateComponent } from './post-create/post-create.component';
     BoardAdminComponent,
     BoardParticipantComponent,
     BoardJuryComponent,
-    PostCreateComponent
+    PostCreateComponent,
+    PostEditComponent
   ],
   imports: [
     BrowserModule,

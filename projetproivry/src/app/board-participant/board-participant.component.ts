@@ -3,7 +3,7 @@ import { UserService } from '../_services/user.service';
 import { TokenStorageService } from './../_services/token-storage.service';
 import { PostService } from '../_services/post.service';
 import Post from '../models/post';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BoardParticipantService } from './../_services/board-participant.service';
 
 
@@ -17,8 +17,17 @@ export class BoardParticipantComponent implements OnInit {
   isLoggedIn = false;
   username: string;
   role: string;
-  posts: Post[]
-  constructor(private userService: UserService, private tokenStorageService: TokenStorageService, private bs: BoardParticipantService, private ps: PostService, private router: Router) { }
+  posts: Post[];
+  update = new Date();
+  constructor(private route: ActivatedRoute, private userService: UserService, private tokenStorageService: TokenStorageService, private bs: BoardParticipantService, private ps: PostService, private router: Router) { }
+
+  deletePost(id: any, index: number) {
+    this.ps.deletePost(id).subscribe(res => {
+      this.posts.splice(index, 1);
+    });
+  }
+
+
 
   ngOnInit() {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
@@ -31,6 +40,7 @@ export class BoardParticipantComponent implements OnInit {
       .subscribe((data: Post[]) => {
         this.posts = data;
       });
+
 
 
   }

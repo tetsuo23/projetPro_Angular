@@ -8,7 +8,7 @@
         </div>
         <div class="col-3 col-md-3 d-flex justify-content-end">
           <button class="btn btn-secondary" [routerLink]="['/']">
-            <img src="../../assets/img/cross.png" alt="" srcset="../../assets/img/cross.png 1x">
+            <img src="../../assets/cross.png" alt="" srcset="../../assets/cross.png 1x">
           </button>
         </div>
       </div>
@@ -18,24 +18,62 @@
     <div id="wrapper" class="d-flex align-items-center justify-content-center">
 
       <div id="page-inner">
-        <div class="row">
+        <div class="container-fluid">
 
-          <div class="col-6 d-flex justify-content-between">
-            <h2>Posts</h2>
-            <div class="col-4" routerLinkActive="active">
-
-              <a class="nav-link" routerLink="post/create" (click)="login()">Create blog</a>
-            </div>
-            <div class="row" *ngFor=" let post of posts; let i=index">
-              <div class="col-8 d-flex justify-content-between">
-                <h3>{{ post.title }}</h3>
+          <div class="row">
+            <div class="col-6 ">
+              <div class="row titre">
+                <div class="col-9">
+                  <h2>Posts</h2>
+                </div>
+                <div class="col-2" routerLinkActive="active">
+                  <button class="btn-secondary" routerLink="post/create" (click)="login()">
+                    Create blog
+                  </button>
+                </div>
+              </div>
+              <div class="row liste" *ngFor=" let post of posts; let i=index">
+                <div class="col-8 d-flex justify-content-between">
+                  <h3>{{ post.title }}</h3>
+                  <h3>{{ post.date | date:'dd/LLL/yy H:mm'}}</h3>
+                  <p>Maj : {{ update | date:'dd/LLL/yy H:mm'}}</p>
+                </div>
+                <div class="col-3 offset-1">
+                  <a class=" btn btn-danger" (click)="deletePost(post._id,i)">Delete</a>
+                  <a [routerLink]="['/post', post._id]" class="btn btn-primary">Edit</a>
+                </div>
               </div>
             </div>
 
+            <div class="col-6 ">
+              <div class="row titre">
+                <div class="col-9">
+                  <h2>Equipe</h2>
+                </div>
+                <div class="col-2" routerLinkActive="active">
+                  <button class="btn-secondary" routerLink="" (click)="login()">Ajouter membre
+                  </button>
+                </div>
+              </div>
+              <div>
+                <div class="row liste" *ngFor=" let post of posts; let i=index">
+                  <div class="col-8 d-flex justify-content-between">
+                    <h3>{{ post.date | date:'dd/LLL/yyyy H:mm'}}</h3>
+                    <p>Maj : {{ post.update | date:'dd/LLL/yyyy H:mm'}}</p>
 
-
+                  </div>
+                  <div class="col-3 offset-1">
+                    <a class=" btn btn-danger" (click)="deletePost(post._id,i)">Delete</a>
+                    <a [routerLink]="['/post', post._id]" class="btn btn-primary">Edit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
+
         </div>
+
       </div>
       <!-- <div class="container d-none d-md-block">
           <div class="row d-flex justify-content-between">
@@ -164,5 +202,5 @@
     </div>
     
     <app-work-in-progress></app-work-in-progress>-->
+
     </div>
-  </div>

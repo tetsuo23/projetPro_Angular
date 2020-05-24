@@ -3,6 +3,6 @@ export default class Post {
     public title: string;
     public content: string;
     public image?: string;
-    public CreatedAt?: string;
+    public CreatedAt: string;
     public UpdatedAt?: string;
 }

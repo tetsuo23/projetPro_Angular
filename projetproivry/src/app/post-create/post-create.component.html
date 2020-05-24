@@ -20,6 +20,7 @@
           <label for="content" class="text-info">Contenu</label>
           <textarea class="form-control" id="content" rows="5" formControlName="content" #content></textarea>
         </div>
+
         <!-- <span>{{post.date | date:'dd/MM/yyyy à HH:mm'}}</span> -->
 
         <a href="" routerLink="/mod"><button type="submit" class="float-right btn btn-warning" style="margin-bottom: 5px" [disabled]="angForm.pristine || angForm.invalid"

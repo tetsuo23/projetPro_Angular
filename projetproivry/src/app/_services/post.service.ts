@@ -5,11 +5,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PostService {
   uri = 'http://localhost:8080/posts';
+  update = new Date();
   constructor(private http: HttpClient) { }
   addPost(title, content) {
     const obj = {
       title,
       content,
+
+
     };
     console.log(obj);
     this.http.post(`${this.uri}/add`, obj)
@@ -24,7 +27,8 @@ export class PostService {
   updatePost(Title: any, Content: any, id: any) {
     const obj = {
       Title,
-      Content
+      Content,
+
     };
     this
       .http

@@ -47,7 +47,7 @@
   min-height: 420px;
   line-height: 20px;
   height: 100vh;
-
+  padding-top: 6%;
 }
 
 .pad-top {
@@ -87,13 +87,19 @@
 }
 
 .btn-secondary {
-  height: 50%;
-  width: 50%;
+  background-color: rgb(152, 153, 153);
+  border-radius: 10%;
+  box-shadow: -25px 25px 15px #333;
+  transition: .5s ease-in-out;
+  width: 100px;
+  margin-bottom: 20px;
 }
 
-.btn-secondary img {
-  height: 76%;
-  transform: translate(-25%, -10%);
+.btn-secondary:hover {
+  background-color: #2C6D7A;
+  border: none;
+  box-shadow: -15px 15px 15px white;
+  transition: .3s ease-in-out
 }
 
 /*==============================================
@@ -118,6 +124,14 @@ h4 {
 .block5 {
   width: 100px;
 }
+
+.titre {
+  position: fixed;
+  top: 14%;
+  width: 50%;
+}
+
+.liste {}
 
 /*==============================================
     FOOTER STYLES     
@@ -287,10 +301,10 @@ h3 {
   /* ----participant board ------------- */
   #participant {
     height: 100vh;
-    width: 105vw;
+    width: 100vw;
     position: absolute;
     top: 0%;
-    left: -4%;
+    left: 0%;
     -webkit-animation: appear .5s ease-in-out;
     animation: appear .5s ease-in-out;
     z-index: 999;
@@ -324,8 +338,20 @@ h3 {
   }
 
   .btn-secondary {
-    height: 50%;
-    width: 18%;
+    background-color: rgb(152, 153, 153);
+    border-radius: 10%;
+    box-shadow: -25px 25px 15px #333;
+    transition: .5s ease-in-out;
+    width: 100px;
+    margin-bottom: 20px;
+    height: 80%;
+  }
+
+  .btn-secondary:hover {
+    background-color: #2C6D7A;
+    border: none;
+    box-shadow: -15px 15px 15px white;
+    transition: .3s ease-in-out
   }
 
   #wrapper {
@@ -354,6 +380,7 @@ h3 {
     margin-top: 0;
     max-width: 80%;
     max-height: 80%;
+    overflow-y: auto;
   }
 
   .container .card .face.face1 .content img {
@@ -388,8 +415,8 @@ h3 {
   }
 
   #page-inner {
-    height: 70vh;
-    width: 90vw
+    height: 80vh;
+    width: 100vw
   }
 
   .navbar {
@@ -398,7 +425,8 @@ h3 {
   }
 
   img {
-    height: 15vh;
+    height: 5vh;
+    width: 70%
   }
 
   .container .card .face.face1 {

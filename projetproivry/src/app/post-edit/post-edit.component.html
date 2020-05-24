@@ -1,0 +1,39 @@
+<div class="container d-flex align-items-center" id="editForm">
+
+  <div class="card-body">
+    <form [formGroup]="angForm" novalidate>
+      <div class="form-group">
+        <label class="col-md-4">
+          <h3>Title</h3>
+        </label>
+        <input type="text" class="form-control" formControlName="Title" #title [(ngModel)]="post.title" />
+      </div>
+      <div *ngIf="angForm.controls['Title'].invalid && (angForm.controls['Title'].dirty || angForm.controls['Title'].touched)" class="alert alert-danger">
+
+        <div *ngIf="angForm.controls['Title'].errors.required">
+          Post title is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">
+          <h3>Contenu</h3>
+        </label>
+        <textarea class="form-control" rows=7 cols="5" formControlName="Content" #content [(ngModel)]="post.content"></textarea>
+      </div>
+      <div *ngIf="angForm.controls['Content'].invalid && (angForm.controls['Content'].dirty || angForm.controls['Content'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['Content'].errors.required">
+          Member Bio is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+
+        <a href="" [routerLink]="['/mod']"><button type="submit" class="btn btn-primary" [disabled]="angForm.pristine || angForm.invalid"
+            (click)="updatePost(angForm.controls['Title'].value, angForm.controls['Content'].value)">Update
+            post </button></a>
+      </div>
+    </form>
+  </div>
+
+
+</div>
