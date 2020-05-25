@@ -18,7 +18,7 @@ export class BoardParticipantComponent implements OnInit {
   username: string;
   role: string;
   posts: Post[];
-  update = new Date();
+
   constructor(private route: ActivatedRoute, private userService: UserService, private tokenStorageService: TokenStorageService, private bs: BoardParticipantService, private ps: PostService, private router: Router) { }
 
   deletePost(id: any, index: number) {

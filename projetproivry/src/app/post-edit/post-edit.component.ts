@@ -13,7 +13,7 @@ export class PostEditComponent implements OnInit {
   post: any = {};
   http: any;
   uri: any;
-  update = new Date()
+
   constructor(private route: ActivatedRoute, private router: Router, private ps: PostService, private fb: FormBuilder) {
     this.createForm();
   }
