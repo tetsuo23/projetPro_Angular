@@ -1,0 +1,66 @@
+/* ------------------ partie actualités ---------- */
+.section3 {
+  overflow-y: scroll
+}
+
+.contenu {
+  height: 40vh;
+  background-color: #7a3e33ee;
+  margin-top: 6%;
+}
+
+.contenu2 {
+  height: 40vh;
+  background-color: #7a3e33ee;
+  margin-top: 3%;
+}
+
+.presentation2 {
+  height: 100vh;
+  position: fixed;
+  overflow-y: scroll;
+}
+
+.presentation2 img {
+  opacity: 0.8
+}
+
+#presentation2 {
+  /* z-index: 99; */
+  position: absolute;
+  top: 0%;
+  /* control des lignes noires couplé avec le margin-top de #underline */
+  width: 100%;
+  height: 100%;
+  left: 8%;
+  /* transform: rotate(0deg);
+  transform-origin: right top; */
+  box-sizing: border-box;
+}
+
+#negatif {
+  height: 100vh;
+  width: 23%;
+  position: absolute;
+  left: 77%;
+
+}
+
+.img-fluid {
+
+  top: 0;
+  left: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+h2 {
+  line-height: 4rem;
+  padding: 4%;
+  padding-top: 2%;
+  font-size: 2.3rem;
+  height: 10%;
+}
+
+/* ------------------ fin partie actualités ---------- */

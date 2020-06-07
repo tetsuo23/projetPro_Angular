@@ -29,6 +29,7 @@ import { PostCreateComponent } from './post-create/post-create.component';
 import { PostEditComponent } from './post-edit/post-edit.component';
 import { IndexComponent } from './index/index.component';
 import { WebsocketService } from './_services/websocket.service';
+import { ActualiteComponent } from './actualite/actualite.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { WebsocketService } from './_services/websocket.service';
     BoardJuryComponent,
     PostCreateComponent,
     PostEditComponent,
-    IndexComponent
+    IndexComponent,
+    ActualiteComponent
   ],
   imports: [
     BrowserModule,

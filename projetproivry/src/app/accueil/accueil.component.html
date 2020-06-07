@@ -32,12 +32,7 @@
 
       <router-outlet></router-outlet>
       <div class="row d-flex justify-content-between button">
-        <div class="col-2 offset-7 button ">
-          <button class="btn-secondary" id="real"><a>Vous ètes réalisateur</a></button>
-        </div>
-        <div class="col-2 button">
-          <button class="btn-secondary" id="ent"><a>Vous étes une entreprise</a></button>
-        </div>
+
       </div>
     </mat-sidenav-content>
 
@@ -134,7 +129,12 @@
                 </div>
               </div>
             </div>
-
+            <div class="col-5 button ">
+              <button class="btn-secondary" id="real"><a>Vous ètes réalisateur</a></button>
+            </div>
+            <div class="col-5 offset-1 button">
+              <button class="btn-secondary" id="ent"><a>Vous étes une entreprise</a></button>
+            </div>
 
 
 
@@ -155,13 +155,11 @@
   </section>
 
   <section id="section3">
-    <div class="content">
-      <h2>Section trois</h2>
-      <button class="btn-secondary" id="btn2" (click)="to2()"><a>Section2</a></button>
-      <button class="btn-secondary" id="btn4" (click)="to4()"><a>Section4</a></button>
-      <button class="btn-secondary" id="home"><a href="#cut">Home</a></button>
 
-    </div>
+    <app-actualite></app-actualite>
+
+
+
   </section>
 
   <section id="section4">

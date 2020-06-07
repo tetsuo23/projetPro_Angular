@@ -5,9 +5,9 @@
 
 }
 
-#content {
+/* #content {
   background-color: #2c6d7a;
-}
+} */
 
 .container {
   position: absolute;
@@ -76,12 +76,10 @@
 
 }
 
-.container section:nth-child(3) {
-  background-color: rgb(96, 96, 170);
-}
+
 
 .container section:nth-child(4) {
-  background-color: rgb(134, 134, 231);
+  /* background-color: rgb(134, 134, 231); */
 }
 
 .container section .content {
@@ -189,7 +187,8 @@ mat-sidenav-content a {
   left: 10px;
   overflow: hidden;
   background: transparent;
-  width: 100%;
+  width: 20%;
+  padding-top: 2%;
 }
 
 .mat-drawer-backdrop.mat-drawer-shown {
@@ -237,6 +236,8 @@ a:active {
   background: transparent;
 
 }
+
+
 
 .mat-drawer-inner-container {
   justify-content: center;
