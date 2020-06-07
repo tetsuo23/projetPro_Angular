@@ -6,6 +6,40 @@ const postRoute = require('./app/routes/post.routes');
 const userRoute = require('./app/routes/user.routes');
 const app = express();
 
+const fs = require('fs');
+
+var appio = require('express')();
+var serverio = require('http').Server(appio);
+var io = require('socket.io')(serverio);
+
+appio.use(bodyParser.json());
+appio.use(bodyParser.urlencoded({
+  extended: false
+}));
+
+serverio.listen(3002, () => {
+  console.log("IO CONNECTED SERVER");
+});
+
+io.on('connection', (socket) => {
+  console.log("user " + socket.id + " connected !");
+  socket.on("upload-image-post", (data) => {
+    console.log(data);
+    let datas = new Buffer.from(data.data);
+    let name = data.name;
+
+    fs.writeFile("../../../../../../../xampp/htdocs/upload/" + name, datas, 'binary', (err) => {
+      if (err) return console.log('Error on upload File when add Post : ' + err);
+    });
+  });
+  socket.on('new-message', (datas) => {
+    io.emit('new-message', {
+      message: datas.message,
+      username: datas.username
+    });
+  });
+});
+
 var corsOptions = {
   origin: "http://localhost:8081"
 };
@@ -44,7 +78,7 @@ db.mongoose
 // simple route
 app.get("/", (req, res) => {
   res.json({
-    message: "Welcome to bezkoder application."
+    message: "Welcome to Tetsuo application."
   });
 });
 
@@ -56,7 +90,7 @@ require("./app/routes/auth.routes")(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+  console.log(`Run run Forest runnnnnnnn !!! ${PORT}.`);
 });
 
 function initial() {

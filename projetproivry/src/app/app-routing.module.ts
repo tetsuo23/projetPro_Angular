@@ -8,6 +8,8 @@ import { BoardParticipantComponent } from './board-participant/board-participant
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { PostCreateComponent } from './post-create/post-create.component';
 import { PostEditComponent } from './post-edit/post-edit.component';
+import { IndexComponent } from './index/index.component';
+
 
 
 const routes: Routes = [
@@ -20,6 +22,7 @@ const routes: Routes = [
   { path: 'mod', component: BoardParticipantComponent },
   { path: 'mod/post/create', component: PostCreateComponent },
   { path: 'post/:id', component: PostEditComponent },
+  { path: 'upload', component: IndexComponent }
 ];
 
 @NgModule({

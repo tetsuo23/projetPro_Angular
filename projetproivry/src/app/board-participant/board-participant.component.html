@@ -3,7 +3,7 @@
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="adjust-nav">
       <div class="row">
-        <div class="col-9 col-lg-9 d-flex justify-content-start">
+        <div class="col-9 col-lg-9 d-flex justify-content-start align-items-center">
           <h2>{{ username }} DASHBOARD</h2>
         </div>
         <div class="col-3 col-md-3 d-flex justify-content-end">
@@ -19,33 +19,51 @@
 
       <div id="page-inner">
         <div class="container-fluid">
-
           <div class="row">
-            <div class="col-4 ">
-              <div class="row titre">
+            <div class="col-8 ">
+              <div class="row">
                 <div class="col-9">
                   <h2>Posts</h2>
                 </div>
-                <div class="col-2" routerLinkActive="active">
-                  <button class="btn-secondary" routerLink="post/create" (click)="login()">
+                <div class="col-3" routerLinkActive="active">
+                  <button class="btn btn-secondary" routerLink="post/create" (click)="login()">
                     Create blog
                   </button>
                 </div>
               </div>
-              <div class="row liste" *ngFor=" let post of posts; let i=index">
-                <div class="col-8 d-flex justify-content-between">
-                  <h3>{{ post.title }}</h3>
-                  <h3>{{ post.date | date:'dd/LLL/yy H:mm'}}</h3>
-                  <p>Maj : {{ post.update | date:'dd/LLL/yy H:mm'}}</p>
-                </div>
-                <div class="col-3 offset-1">
-                  <a class=" btn btn-danger" (click)="deletePost(post._id,i)">Delete</a>
-                  <a [routerLink]="['/post', post._id]" class="btn btn-primary">Edit</a>
+              <div class="container">
+                <div class="row liste" *ngFor=" let post of posts; let i=index">
+
+
+                  <div class="col-12">
+                    <h3>{{ post.title }}</h3>
+                  </div>
+
+
+                  <div class="col-4">
+                    <p>Parution : {{ post.date | date:'dd/LLL/yy H:mm'}}</p>
+                  </div>
+                  <div class="col-4">
+                    <p>Maj : {{ post.update | date:'dd/LLL/yy H:mm'}}</p>
+                  </div>
+                  <div class="col-4">
+                    <p>auteur : {{ post.auteur }}</p>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-5">
+                      <img [src]="safeUrl(post.upload)" alt="" id='upload'>
+                    </div>
+                    <div class="col-3 offset-4">
+                      <a class=" btn btn-danger" (click)="deletePost(post._id,i)">Delete</a>
+                      <a [routerLink]="['/post', post._id]" class="btn btn-primary">Edit</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-4 ">
+            <!-- <div class="col-4 ">
               <div class="row titre">
                 <div class="col-9">
                   <h2>Equipe</h2>
@@ -68,27 +86,38 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="col-4 ">
               <div class="row titre">
-                <div class="col-9">
+                <div class="col-12">
                   <h2>Tchat</h2>
                 </div>
-                <div class="col-2" routerLinkActive="active">
 
+                <div class="tchat col-11">
+                  <input class="send col-12" [(ngModel)]="message" (keyup)="$event.keyCode == 13 && sendMessage()" />
+                  <button class="btn btn-secondary" (click)="sendMessage()">Send</button>
+                  <div class="message col-12">
+                    <div class="row" *ngFor="let message of messages">
+                      <div class="col-3">
+                        <p> {{ message.username}}: </p>
+                      </div>
+
+                      <div class="col-9">
+                        {{message.message}}
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
               </div>
               <div>
 
               </div>
             </div>
+
           </div>
-
-
         </div>
-
-      </div>
-      <!-- <div class="container d-none d-md-block">
+        <!-- <div class="container d-none d-md-block">
           <div class="row d-flex justify-content-between">
             <div class="card col-md-6">
               <div class="face face1">
@@ -216,4 +245,4 @@
     
     <app-work-in-progress></app-work-in-progress>-->
 
-    </div>
+      </div>

@@ -36,6 +36,6 @@ label {
 
 @media screen and (min-width:1280px) {
   .card-body {
-    height: 55vh;
+    height: 70vh;
   }
 }

@@ -7,11 +7,12 @@ export class PostService {
   uri = 'http://localhost:8080/posts';
   update = new Date();
   constructor(private http: HttpClient) { }
-  addPost(title, content) {
+  addPost(title, content, auteur, url) {
     const obj = {
       title,
       content,
-
+      auteur,
+      url
 
     };
     console.log(obj);
@@ -24,16 +25,20 @@ export class PostService {
       .http
       .get(`${this.uri}`);
   }
-  updatePost(Title: any, Content: any, id: any) {
+  uploadImage(file: Object) {
+    this.http.post(`${this.uri}/upload-image`, file).subscribe(res => console.log(res));
+  }
+  updatePost(Title: any, Content: any, Auteur: any, url: string, id: any) {
     const obj = {
       Title,
       Content,
-
+      Auteur,
+      url
     };
     this
       .http
       .post(`${this.uri}/update/${id}`, obj)
-      .subscribe(res => console.log('Done'));
+      .subscribe(res => console.log('Done', obj));
   }
   editPost(id: any) {
     return this

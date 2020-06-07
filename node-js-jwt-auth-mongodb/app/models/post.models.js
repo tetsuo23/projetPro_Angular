@@ -14,6 +14,12 @@ let Post = new Schema({
   },
   update: {
     type: Date
+  },
+  upload: {
+    type: String
+  },
+  auteur: {
+    type: String
   }
 }, {
   collection: 'Post'

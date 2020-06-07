@@ -22,16 +22,35 @@
       </div>
       <div *ngIf="angForm.controls['Content'].invalid && (angForm.controls['Content'].dirty || angForm.controls['Content'].touched)" class="alert alert-danger">
         <div *ngIf="angForm.controls['Content'].errors.required">
-          Member Bio is required.
+          Content is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">
+          <h3>Auteur</h3>
+        </label>
+        <input type="text" class="form-control" formControlName="Auteur" #auteur [(ngModel)]="post.auteur" />
+      </div>
+      <div *ngIf="angForm.controls['Auteur'].invalid && (angForm.controls['Auteur'].dirty || angForm.controls['Auteur'].touched)" class="alert alert-danger">
+
+        <div *ngIf="angForm.controls['Auteur'].errors.required">
+          auteur is required.
         </div>
       </div>
 
       <div class="form-group">
-
-        <a href="" [routerLink]="['/mod']"><button type="submit" class="btn btn-primary" [disabled]="angForm.pristine || angForm.invalid"
-            (click)="updatePost(angForm.controls['Title'].value, angForm.controls['Content'].value)">Update
-            post </button></a>
+        <input type="file" (change)="handleFileInput($event.target.files)">
+        <!-- <button (click)="uploading()">Up</button> -->
       </div>
+
+
+
+
+
+      <a href="" [routerLink]="['/mod']"><button type="submit" class="btn btn-primary" [disabled]="angForm.pristine || angForm.invalid"
+          (click)="updatePost(angForm.controls['Title'].value, angForm.controls['Content'].value, angForm.controls['Auteur'].value)">Update
+          post </button></a>
+
     </form>
   </div>
 

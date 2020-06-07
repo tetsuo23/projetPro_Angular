@@ -27,6 +27,8 @@ import { BoardJuryComponent } from './board-jury/board-jury.component';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { PostCreateComponent } from './post-create/post-create.component';
 import { PostEditComponent } from './post-edit/post-edit.component';
+import { IndexComponent } from './index/index.component';
+import { WebsocketService } from './_services/websocket.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { PostEditComponent } from './post-edit/post-edit.component';
     BoardParticipantComponent,
     BoardJuryComponent,
     PostCreateComponent,
-    PostEditComponent
+    PostEditComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,7 @@ import { PostEditComponent } from './post-edit/post-edit.component';
     HttpClientModule,
 
   ],
-  providers: [authInterceptorProviders],
+  providers: [authInterceptorProviders, WebsocketService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
