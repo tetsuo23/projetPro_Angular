@@ -11,5 +11,9 @@ export class ActualiteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  to2() {
+    document.getElementById("section2").scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById('ent').style.display = 'block';
+    document.getElementById('real').style.display = 'block';
+  }
 }

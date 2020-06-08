@@ -8,7 +8,7 @@
         </div>
         <div class="col-3 col-md-3 d-flex justify-content-end">
           <button class="btn btn-secondary" [routerLink]="['/']">
-            <img src="../../assets/cross.png" alt="" srcset="../../assets/cross.png 1x">
+            <img src="../../assets/cross.png" (click)="close()" alt="" srcset="../../assets/cross.png 1x">
           </button>
         </div>
       </div>
@@ -26,7 +26,7 @@
                   <h2>Posts</h2>
                 </div>
                 <div class="col-3" routerLinkActive="active">
-                  <button class="btn btn-secondary" routerLink="post/create" (click)="login()">
+                  <button class="btn btn-secondary" id="create" routerLink="post/create" (click)="login()">
                     Create blog
                   </button>
                 </div>

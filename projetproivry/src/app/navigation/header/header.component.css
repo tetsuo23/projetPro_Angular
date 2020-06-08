@@ -33,7 +33,7 @@ button {
 
 .login2 {
   width: 50px;
-
+  margin-bottom: 35px;
 }
 
 /* .login3 {
@@ -60,4 +60,8 @@ button {
 
 a {
   color: #7a3e33;
+}
+
+#board {
+  width: 10%
 }

@@ -1,24 +1,50 @@
 /* ------------------ partie actualités ---------- */
 .section3 {
-  overflow-y: scroll
+  overflow-y: none
 }
 
-.contenu {
-  height: 40vh;
-  background-color: #7a3e33ee;
-  margin-top: 6%;
+.contenu,
+.contenu3 {
+
+  margin-left: 10%
+}
+
+#google {
+  width: 100%;
+  height: 100%
 }
 
 .contenu2 {
   height: 40vh;
-  background-color: #7a3e33ee;
-  margin-top: 3%;
+}
+
+.contenu {
+  height: 85vh;
+  overflow-y: scroll;
+}
+
+.contenu2,
+.contenu {
+
+  background-color: #7a3e33cc;
+  margin-top: 6%;
+  padding: 1%;
+}
+
+.contenu3,
+.contenu4 {
+  height: 40vh;
+  background-color: #7a3e33cc;
+  margin-top: 10%;
+}
+
+.article {
+  height: 100%
 }
 
 .presentation2 {
   height: 100vh;
   position: fixed;
-  overflow-y: scroll;
 }
 
 .presentation2 img {
@@ -32,7 +58,7 @@
   /* control des lignes noires couplé avec le margin-top de #underline */
   width: 100%;
   height: 100%;
-  left: 8%;
+  left: 10%;
   /* transform: rotate(0deg);
   transform-origin: right top; */
   box-sizing: border-box;
@@ -57,10 +83,58 @@
 
 h2 {
   line-height: 4rem;
-  padding: 4%;
-  padding-top: 2%;
-  font-size: 2.3rem;
+  padding: 0%;
+  padding-top: 1%;
+  font-family: exo 2;
+  font-style: italic;
+  font-size: 3rem;
   height: 10%;
 }
 
 /* ------------------ fin partie actualités ---------- */
+#home {
+  position: absolute;
+  right: 11%;
+  top: 1%;
+  height: 60px;
+  width: 100px;
+  border: none;
+  background-color: rgb(152, 153, 153);
+  border-radius: 10%;
+  box-shadow: -25px 25px 15px #333;
+  transition: .5s ease-in-out
+}
+
+#find {
+  position: absolute;
+  right: 9%;
+  top: 70%;
+  height: 15%;
+  /* width: 100px; */
+  border: none;
+  background-color: rgb(152, 153, 153);
+  border-radius: 10%;
+  box-shadow: -25px 25px 15px #333;
+  transition: .5s ease-in-out
+}
+
+.btn-secondary:hover {
+  background-color: #7a3e33;
+  border: none;
+  box-shadow: 25px 25px 15px white;
+  transition: .3s ease-in-out;
+  border: rgb(243, 169, 84) 2px solid;
+}
+
+.btn-secondary a {
+  font-family: play;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+}
+
+#rotary {
+  width: 100%;
+
+}

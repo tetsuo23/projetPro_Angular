@@ -19,11 +19,17 @@ export class SidenavListComponent implements OnInit {
   }
   to2() {
     document.getElementById("section2").scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById('ent').style.display = 'block';
+    document.getElementById('real').style.display = 'block';
   }
   to3() {
     document.getElementById("section3").scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById('ent').style.display = 'none';
+    document.getElementById('real').style.display = 'none';
   }
   to4() {
     document.getElementById("section4").scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById('ent').style.display = 'none';
+    document.getElementById('real').style.display = 'none';
   }
 }

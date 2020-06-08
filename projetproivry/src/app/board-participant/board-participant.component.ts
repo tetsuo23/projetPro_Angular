@@ -66,5 +66,10 @@ export class BoardParticipantComponent implements OnInit {
   safeUrl(url) {
     return this.sanitazer.bypassSecurityTrustResourceUrl(url);
   }
-
+  close() {
+    document.getElementById('mat-side').style.width = "20%";
+    document.getElementById('participant').style.display = "none";
+    document.getElementById('ent').style.display = 'block';
+    document.getElementById('real').style.display = 'block';
+  }
 }

@@ -41,7 +41,7 @@ body {
 .mat-typography h3 {
   font-family: 'Montserrat', sans-serif;
   z-index: 99;
-
+  font-size: 1.8rem;
 }
 
 .navlist {

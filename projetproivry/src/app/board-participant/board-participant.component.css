@@ -3,10 +3,10 @@
   width: 107vw;
   position: absolute;
   top: 0%;
-  left: -4%;
+  left: -550%;
   /* overflow-y: scroll; */
   animation: appear .5s ease-in-out;
-  z-index: 999;
+  /* z-index: 99; */
 }
 
 #upload {
@@ -107,13 +107,17 @@
   transition: .3s ease-in-out
 }
 
+#create {
+  width: 70%
+}
+
 /*==============================================
     DASHBOARD STYLES    
     =============================================*/
 
 .navbar {
   width: 93%;
-  position: fixed;
+  /* position: fixed; */
   z-index: 99;
   height: 20%;
 }
@@ -146,7 +150,7 @@ h4 {
   width: 33%;
 }
 
-.liste {}
+
 
 /*==============================================
     FOOTER STYLES     
@@ -304,6 +308,12 @@ img {
 }
 
 /* ------------- END SECTIONS ---------------------------*/
+.liste {
+  border: 1px solid black;
+  margin: 1%;
+  padding: 1%;
+  border-radius: 1%;
+}
 
 /*==============================================
     MEDIA QUERIES     
@@ -320,7 +330,8 @@ img {
     left: 0%;
     -webkit-animation: appear .5s ease-in-out;
     animation: appear .5s ease-in-out;
-    z-index: 999;
+
+    display: none;
   }
 
   #page-wrapper {
@@ -329,11 +340,11 @@ img {
   }
 
   .navbar {
-    width: 98%;
-    position: fixed;
-    z-index: 99;
+    width: 100%;
+    /* position: fixed; */
+    /* z-index: 99; */
     height: 10%;
-    left: 1%
+    left: 0%
   }
 
   .nav2 {
@@ -413,9 +424,6 @@ img {
 }
 
 @media screen and (min-width:1280px) {
-  .navbar {
-    width: 90%;
-  }
 
   #page-wrapper {
     padding: 0;
@@ -429,13 +437,13 @@ img {
   }
 
   #page-inner {
-    height: 80vh;
+    height: 100vh;
     width: 100vw;
-    padding-top: 3%
+    padding-top: 1%
   }
 
   .navbar {
-    width: 98%;
+    width: 100%;
     top: 0;
   }
 
@@ -453,7 +461,7 @@ img {
   }
 
   .tchat {
-    height: 60vh;
+    height: 77vh;
     background-color: #2C6D7A;
     border-radius: 1%;
     overflow-y: auto;
@@ -465,7 +473,7 @@ img {
   }
 
   .container {
-    height: 60vh;
+    height: 90vh;
     border: 1px solid #333;
     padding: 5%;
     overflow-x: hidden;

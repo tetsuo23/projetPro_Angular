@@ -51,5 +51,10 @@ export class HeaderComponent implements OnInit {
   login() {
     document.getElementById("mat-side").style.background = '#000000BB';
   }
+  slide() {
+    document.getElementById('mat-side').style.width = "100%";
+    document.getElementById('participant').style.display = "block";
+  }
+
 
 }

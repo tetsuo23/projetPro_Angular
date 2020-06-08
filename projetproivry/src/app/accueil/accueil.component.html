@@ -3,9 +3,7 @@
     crossorigin="anonymous">
 </head>
 
-<p class="underline">
-  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-</p>
+
 
 <div class="row">
 
@@ -17,7 +15,11 @@
     </mat-sidenav>
     <mat-sidenav-content>
       <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
-      <!-- <div class="nav-link" href="#" id="titre">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+  <!-- <div class="nav-link" href="#" id="titre">
 
         <h1>Festival du film d'Ivry</h1>
       </div>
@@ -30,50 +32,24 @@
       <a class="nav-link" href="#">Link</a><a class="nav-link" href="#">Link</a>
       <a class="nav-link" href="#">Link</a> -->
 
-      <router-outlet></router-outlet>
-      <div class="row d-flex justify-content-between button">
 
-      </div>
-    </mat-sidenav-content>
 
-  </mat-sidenav-container>
+
 
 </div>
+<div class="row presentation">
+  <img src="./../../assets/back.png" class="img-fluid back" alt="fond noir et blanc" srcset="./../../assets/back.png">
 
+  <img src="./../../assets/negatif80.png" class="img-fluid back" id="negatif" alt="bande de négatif" srcset="./../../assets/negatif80.png">
+</div>
 <div class="container" id="accueil">
 
   <section id="section1">
-    <div class="content">
-      <div class="row">
-        <div class="col-2 offset-2">
-          <h2>Section une</h2>
-        </div>
-      </div>
 
-      <button class="btn-secondary"><a href="#cut">Home</a></button>
-
-
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis animi illum consequatur esse omnis! Consequatur tenetur dolor temporibus quo obcaecati eius totam eligendi natus? Eum
-        facilis
-        ipsum, voluptatem laudantium at harum, eius explicabo odio iusto temporibus provident aspernatur dolores, nobis consequuntur id. Nihil sequi in magnam cupiditate esse veniam voluptate modi
-        laborum
-        officiis eveniet? Fuga nihil nulla magnam commodi. Atque ipsa ipsum, exercitationem corporis deleniti debitis illum. Quo, dicta. Ex nesciunt perspiciatis nisi similique nostrum voluptatum
-        quam
-        accusantium, mollitia dolor maiores tenetur suscipit amet corrupti possimus dolores, rem ipsum! Totam repellat numquam voluptas tempora saepe, sint reprehenderit officia, animi dolores
-        accusamus
-        voluptates eligendi consequatur optio, sed voluptate. Nesciunt architecto et quasi impedit numquam aliquam explicabo? Repellendus nobis tempore blanditiis ex veritatis facere impedit
-        dolore eaque,
-        perferendis nisi obcaecati fugit soluta rerum ut a sunt accusamus porro corporis tenetur placeat fugiat officia quas et architecto. Architecto voluptatum repellendus sapiente similique ad.
-      </p>
-    </div>
   </section>
   <section id="section2">
 
-    <div class="row presentation">
-      <img src="./../../assets/back.png" class="img-fluid back" alt="" srcset="./../../assets/back.png">
 
-      <img src="./../../assets/negatif80.png" class="img-fluid back" id="negatif" alt="" srcset="./../../assets/negatif80.png">
-    </div>
     <div class="row" id="underline"></div>
     <div class="container" id="presentation">
       <div class="row presentation">
@@ -121,25 +97,21 @@
             <div class="col-9 col-lg-12 carousel">
               <div class="scrollable">
                 <div class="items">
-                  <img src="./../../assets/eye.jpg" alt="" />
-                  <img src="./../../assets/mystical.jpg" alt="" />
-                  <img src="./../../assets/stretched.jpg" alt="" />
-                  <img src="./../../assets/cam.jpg" alt="" />
-                  <img src="./../../assets/moyen_format.jpg" alt="" />
+                  <img src="./../../assets/eye.jpg" alt="oeil en gros plan" />
+                  <img src="./../../assets/mystical.jpg" alt="portrait de femme" />
+                  <img src="./../../assets/stretched.jpg" alt="photo NB ponton" />
+                  <img src="./../../assets/cam.jpg" alt="caméra" />
+                  <img src="./../../assets/moyen_format.jpg" alt="vieilles caméras" />
                 </div>
               </div>
             </div>
-            <div class="col-5 button ">
-              <button class="btn-secondary" id="real"><a>Vous ètes réalisateur</a></button>
-            </div>
-            <div class="col-5 offset-1 button">
-              <button class="btn-secondary" id="ent"><a>Vous étes une entreprise</a></button>
-            </div>
+
 
 
 
 
           </div>
+
         </div>
         <div class="row d-flex justify-content-around">
 
@@ -149,6 +121,14 @@
 
 
 
+      </div>
+    </div>
+    <div class="row d-flex justify-content-between button" id="call">
+      <div class="col-3 button offset-5 ">
+        <button class="btn-secondary" id="real"><a>Vous ètes réalisateur</a></button>
+      </div>
+      <div class="col-3 offset-1 button">
+        <button class="btn-secondary" id="ent"><a>Vous étes une entreprise</a></button>
       </div>
     </div>
 
@@ -165,9 +145,9 @@
   <section id="section4">
     <div class="content">
       <h2>Section quatre</h2>
-      <button class="btn-secondary" id="btn2" (click)="to2()"><a>Section2</a></button>
-      <button class="btn-secondary" id="btn3" (click)="to3()"><a>Section3</a></button>
-      <button class="btn-secondary" id="home"><a href="#cut">Home</a></button>
+      <button class="btn-secondary" id="btn2" (click)="to2()"><a>Accueil</a></button>
+
+      <!-- <button class="btn-secondary" id="home"><a href="#cut">Home</a></button> -->
 
 
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis animi illum consequatur esse omnis! Consequatur tenetur dolor temporibus quo obcaecati eius totam eligendi natus? Eum

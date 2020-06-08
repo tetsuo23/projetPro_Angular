@@ -1,61 +1,84 @@
-<mat-toolbar>
-  <div class="row">
-    <div class="col-1">
-      <div class="col-12" routerLinkActive="active">
-        <div>
-          <button (click)="onToggleSidenav()">
-            <mat-icon>menu</mat-icon>
-          </button>
-        </div>
-        <!-- <li class="nav-item" *ngIf="showAdminBoard">
+<div class="col-1">
+  <div class="col-12" routerLinkActive="active">
+    <div>
+      <button (click)="onToggleSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <!-- <li class="nav-item" *ngIf="showAdminBoard">
           <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
         </li>
         <li class="nav-item" *ngIf="showParticipantBoard">
           <a href="/mod" class="nav-link" routerLink="mod">Participant Board</a>
         </li> -->
-        <!--<li class="nav-item">
+    <!--<li class="nav-item">
           <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
         </li>-->
-        <div class="col-12">
-          <div>
-            <button mat-icon-button class="btn-secondary" href="#section3" routerLink="admin" *ngIf="showAdminBoard">
-              Admin Board
-            </button></div>
-          <div>
-            <button mat-icon-button class="btn-secondary" href="#section4" routerLink="mod" *ngIf="showParticipantBoard">
-              Participant Board
-            </button></div>
-        </div>
-        <div *ngIf="!isLoggedIn">
-          <div>
-            <button mat-icon-button class="login" routerLink="connexion" (click)="login()">
-              <img src="./../../../assets/login.png" class="img-fluid" alt="" srcset="">
-            </button></div>
-          <div>
-            <button mat-icon-button class="login2" routerLink="register" (click)="login()">
-              <img src="./../../../assets/login_in-128.png" class="img-fluid" alt="" srcset="">
-            </button></div>
-        </div>
-
-        <div class="col-12" *ngIf="isLoggedIn">
-          <button mat-icon-button class="btn-secondary" href="/profile" routerLink="profile">
-            {{ username }}
-          </button>
-          <button mat-icon-button class="btn-secondary" (click)="logout()">
-            LogOut
-          </button>
-        </div>
-
-      </div>
-
-
+    <div class="col-12">
+      <div>
+        <button mat-icon-button class="btn-secondary" href="#section3" routerLink="admin" *ngIf="showAdminBoard">
+          Admin Board
+        </button></div>
+      <div>
+        <button mat-icon-button class="btn-secondary" href="#section4" (click)="slide()" routerLink="mod" *ngIf="showParticipantBoard">
+          Participant Board
+        </button></div>
+    </div>
+    <div *ngIf="!isLoggedIn">
+      <div>
+        <button mat-icon-button class="login" routerLink="connexion" (click)="login()">
+          <img src="./../../../assets/login.png" class="img-fluid" alt="" srcset="">
+        </button></div>
+      <div>
+        <button mat-icon-button class="login2" routerLink="register" (click)="login()">
+          <img src="./../../../assets/login_in-128.png" class="img-fluid" alt="" srcset="">
+        </button></div>
+      <div>
+        <button mat-icon-button class="login" routerLink="register" (click)="login()">
+          <img src="./../../../assets/facebook.png" class="img-fluid" alt="" srcset="">
+        </button></div>
+      <div>
+        <button mat-icon-button class="login" routerLink="register" (click)="login()">
+          <img src="./../../../assets/twitter.png" class="img-fluid" alt="" srcset="">
+        </button></div>
+      <div>
+        <button mat-icon-button class="login" routerLink="register" (click)="login()">
+          <img src="./../../../assets/youtube.png" class="img-fluid" alt="" srcset="">
+        </button></div>
 
     </div>
+
+    <div class="col-12" *ngIf="isLoggedIn">
+      <button mat-icon-button class="btn-secondary" href="/profile" routerLink="profile">
+        {{ username }}
+      </button>
+      <button mat-icon-button class="btn-secondary" (click)="logout()">
+        LogOut
+      </button>
+      <div>
+        <button mat-icon-button class="login" routerLink="register" (click)="login()">
+          <img src="./../../../assets/facebook.png" class="img-fluid" alt="" srcset="">
+        </button></div>
+      <div>
+        <button mat-icon-button class="login" routerLink="register" (click)="login()">
+          <img src="./../../../assets/twitter.png" class="img-fluid" alt="" srcset="">
+        </button></div>
+      <div>
+        <button mat-icon-button class="login" routerLink="register" (click)="login()">
+          <img src="./../../../assets/youtube.png" class="img-fluid" alt="" srcset="">
+        </button></div>
+    </div>
+
   </div>
-  <!-- <div>
+
+
+
+</div>
+
+<!-- <div>
     <a routerLink="/home">Owner-Account</a>
   </div> -->
-  <!-- <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+<!-- <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
     <ul fxLayout fxLayoutGap="15px" class="navigation-items">
       <li>
         <a routerLink="/owner">Owner Actions</a>
@@ -65,4 +88,3 @@
       </li>
     </ul>
   </div> -->
-</mat-toolbar>
