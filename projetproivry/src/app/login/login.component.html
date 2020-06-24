@@ -3,7 +3,7 @@
     <div class="card card-container">
       <div class="col-3 offset-9 col-md-6 offset-md-6">
         <button class="btn btn-secondary cross">
-          <img src="../../assets/cross.png" alt="" srcset="../../assets/cross.png 1x" [routerLink]="['/']" (click)="logout()">
+          <img src="../../assets/cross.png" class="img-fluid" alt="" srcset="../../assets/cross.png 1x" [routerLink]="['/']" (click)="logout()">
         </button>
       </div>
 
@@ -39,7 +39,7 @@
       </form>
 
       <div class="alert alert-success" *ngIf="isLoggedIn">
-        Logged in as {{ roles }}.
+        Bienvenue, {{ username }} vous ètes connecté en tant que {{ roles }}.
       </div>
     </div>
   </div>

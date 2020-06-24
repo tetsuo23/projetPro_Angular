@@ -27,13 +27,18 @@ button {
 }
 
 .login {
+  /* width: 65px; */
+  margin-bottom: 35px;
+  margin-left: 6px
+}
+
+.login2 {
   width: 65px;
   margin-bottom: 35px;
 }
 
-.login2 {
-  width: 50px;
-  margin-bottom: 35px;
+.login3 {
+  padding-right: 1%;
 }
 
 /* .login3 {
@@ -65,3 +70,24 @@ a {
 #board {
   width: 10%
 }
+
+.img-fluid {
+  width: 65%
+}
+
+.side {
+  padding-left: 0;
+}
+
+.header {
+  padding: 4%;
+  padding-left: 8%;
+}
+
+@media screen and (min-width:961px) {
+  .img-fluid {
+    width: 100%
+  }
+}
+
+@media screen and (min-width:1281px) {}

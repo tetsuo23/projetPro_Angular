@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../_services/user.service';
 import { TokenStorageService } from './../_services/token-storage.service';
 import { PostService } from '../_services/post.service';
 import Post from '../models/post';
-import { ActivatedRoute, Router } from '@angular/router';
-import { BoardParticipantService } from './../_services/board-participant.service';
 import { WebsocketService } from '../_services/websocket.service';
-import { ChatService } from '../_services/chat.service';
 import { DomSanitizer } from '@angular/platform-browser';
 
 
@@ -25,7 +21,7 @@ export class BoardParticipantComponent implements OnInit {
   message: string;
   messages: Array<{ message: String, username: String }> = [];
 
-  constructor(private route: ActivatedRoute, private userService: UserService, private tokenStorageService: TokenStorageService, private bs: BoardParticipantService, private ps: PostService, private router: Router, private ws: WebsocketService, cs: ChatService, private sanitazer: DomSanitizer) {
+  constructor(private tokenStorageService: TokenStorageService, private ps: PostService, private ws: WebsocketService, private sanitazer: DomSanitizer) {
     this.ws.listen('new-message').subscribe((response) => {
       console.log(response);
       this.messages.push({
@@ -49,7 +45,7 @@ export class BoardParticipantComponent implements OnInit {
       const user = this.tokenStorageService.getUser();
       this.username = user.username;
     }
-    this.bs
+    this.ps
       .getPosts()
       .subscribe((data: Post[]) => {
         this.posts = data;

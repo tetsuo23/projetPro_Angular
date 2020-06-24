@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = '';
   roles: string[] = [];
-
+  username: string[] = [];
   @Output() loginClose = new EventEmitter();
   constructor(private authService: AuthService, private tokenStorage: TokenStorageService) { }
 
@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
       this.roles = this.tokenStorage.getUser().roles;
+      this.username = this.tokenStorage.getUser().username;
     }
   }
   public onLoginClose = () => {
@@ -39,6 +40,8 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
+        this.username = this.tokenStorage.getUser().username;
+
         this.reloadPage();
       },
       err => {

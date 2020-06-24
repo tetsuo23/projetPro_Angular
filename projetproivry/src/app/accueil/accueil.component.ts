@@ -44,6 +44,10 @@ export class AccueilComponent implements OnInit {
     document.getElementById("section4").scrollIntoView({ behavior: "smooth", block: "start" });
 
   }
+  to5() {
+    document.getElementById("section5").scrollIntoView({ behavior: "smooth", block: "start" });
+
+  }
 
 
 }

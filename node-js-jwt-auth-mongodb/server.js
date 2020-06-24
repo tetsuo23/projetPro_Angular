@@ -18,7 +18,7 @@ appio.use(bodyParser.urlencoded({
 }));
 
 serverio.listen(3002, () => {
-  console.log("IO CONNECTED SERVER");
+  console.log("gloire à Socket.io !!!");
 });
 
 io.on('connection', (socket) => {
@@ -125,6 +125,7 @@ function initial() {
 
         console.log("added 'admin' to roles collection");
       });
+
     }
   });
 }

@@ -3,10 +3,10 @@
   width: 107vw;
   position: absolute;
   top: 0%;
-  left: -550%;
+  left: 0%;
   /* overflow-y: scroll; */
   animation: appear .5s ease-in-out;
-  /* z-index: 99; */
+  z-index: 99;
 }
 
 #upload {
@@ -42,6 +42,7 @@
   /* overflow-y: scroll; */
   background-color: #D9D9D9;
   width: 95%;
+  overflow-y: scroll
 }
 
 #page-inner {
@@ -144,11 +145,11 @@ h4 {
   width: 100px;
 }
 
-.titre {
+/* .titre {
   position: fixed;
   top: 14%;
   width: 33%;
-}
+} */
 
 
 
@@ -187,6 +188,18 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0
+}
+
+.container {
+  margin-top: 0;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.container-fluid {
+  overflow-y: scroll;
 }
 
 .container2 {
@@ -243,9 +256,14 @@ body {
   z-index: 50;
 }
 
-img {
+/* img {
   height: 20vh;
+} */
+img {
+  height: 5vh;
+  width: 70%
 }
+
 
 .container .card .face.face1 .content h3 {
   margin: 10px 0 0;
@@ -297,6 +315,18 @@ img {
 
 .contact {
   padding-left: 0;
+}
+
+.tchat {
+  height: 77vh;
+  background-color: #2C6D7A;
+  border-radius: 1%;
+  overflow-y: auto;
+}
+
+.message {
+  max-height: 60vh;
+
 }
 
 /*---------- END CARD ------------------------------*/
@@ -401,12 +431,7 @@ img {
     height: 43vh;
   }
 
-  .container {
-    margin-top: 0;
-    max-width: 80%;
-    max-height: 80%;
-    overflow-y: auto;
-  }
+
 
   .container .card .face.face1 .content img {
     max-width: 100px;
@@ -447,11 +472,6 @@ img {
     top: 0;
   }
 
-  img {
-    height: 5vh;
-    width: 70%
-  }
-
   .container .card .face.face1 {
     margin-top: 10%;
   }
@@ -460,12 +480,7 @@ img {
     height: 43vh;
   }
 
-  .tchat {
-    height: 77vh;
-    background-color: #2C6D7A;
-    border-radius: 1%;
-    overflow-y: auto;
-  }
+
 
   .send {
     border-radius: 2%;
@@ -482,10 +497,7 @@ img {
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  .message {
-    max-height: 60vh;
 
-  }
 
 
 }

@@ -17,7 +17,7 @@ export class LandingComponent implements OnInit {
     setTimeout(() => {
 
       this.video2.nativeElement.style.display = "block";
-    }, 10000);
+    }, 1);
   }
   ngOnInit() {
 

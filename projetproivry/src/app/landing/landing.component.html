@@ -1,14 +1,27 @@
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous">
+</head>
+
 <body>
 
-  <div class="container" id="landing">
-    <h1>Festival du film d'Ivry</h1>
+  <div class="container-fluid" id="landing">
+    <div class="row">
+      <div class="col-12">
+        <h1>Festival du film d'Ivry</h1>
+      </div>
+    </div>
+
     <a href="#accueil">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
       Enter </a>
-    <h2>Les entreprises rencontrent le 7ème art</h2>
+    <div class="d-none d-md-block">
+      <h2>Les entreprises rencontrent le 7ème art</h2>
+    </div>
+
 
     <div id="first" #video>
       <video autoplay id="firstVideo" (ended)="videoEnd()">

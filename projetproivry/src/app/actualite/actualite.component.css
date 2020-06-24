@@ -3,11 +3,11 @@
   overflow-y: none
 }
 
-.contenu,
+/* .contenu,
 .contenu3 {
 
   margin-left: 10%
-}
+} */
 
 #google {
   width: 100%;
@@ -35,7 +35,7 @@
 .contenu4 {
   height: 40vh;
   background-color: #7a3e33cc;
-  margin-top: 10%;
+  margin-top: 15%;
 }
 
 .article {
@@ -94,7 +94,7 @@ h2 {
 /* ------------------ fin partie actualités ---------- */
 #home {
   position: absolute;
-  right: 11%;
+  right: 17%;
   top: 1%;
   height: 60px;
   width: 100px;
@@ -137,4 +137,16 @@ h2 {
 #rotary {
   width: 100%;
 
+}
+
+/* ---------------- media queries ----------------------- */
+
+@media screen and (min-width:961px) {}
+
+@media screen and (min-width:1281px) {
+
+  .contenu3,
+  .contenu4 {
+    margin-top: 10%;
+  }
 }

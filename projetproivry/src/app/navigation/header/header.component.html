@@ -1,5 +1,11 @@
-<div class="col-1">
-  <div class="col-12" routerLinkActive="active">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous">
+</head>
+
+
+<div class="col-1 d-none d-md-block side">
+  <div class="col-12 side" routerLinkActive="active">
     <div>
       <button (click)="onToggleSidenav()">
         <mat-icon>menu</mat-icon>
@@ -26,11 +32,11 @@
     </div>
     <div *ngIf="!isLoggedIn">
       <div>
-        <button mat-icon-button class="login" routerLink="connexion" (click)="login()">
-          <img src="./../../../assets/login.png" class="img-fluid" alt="" srcset="">
+        <button mat-icon-button class="login2" routerLink="connexion" (click)="login()">
+          <img src="./../../../assets/login.png" class="img-fluid login3" alt="" srcset="">
         </button></div>
       <div>
-        <button mat-icon-button class="login2" routerLink="register" (click)="login()">
+        <button mat-icon-button class="login" routerLink="register" (click)="login()">
           <img src="./../../../assets/login_in-128.png" class="img-fluid" alt="" srcset="">
         </button></div>
       <div>
@@ -73,6 +79,107 @@
 
 
 
+</div>
+<div class="row">
+  <div class="col-12 d-block d-md-none side">
+    <div class="col-12 side" routerLinkActive="active">
+
+      <!-- <li class="nav-item" *ngIf="showAdminBoard">
+          <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+        </li>
+        <li class="nav-item" *ngIf="showParticipantBoard">
+          <a href="/mod" class="nav-link" routerLink="mod">Participant Board</a>
+        </li> -->
+      <!--<li class="nav-item">
+          <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+        </li>-->
+      <div class="row">
+        <div class="col-12">
+          <div>
+            <button mat-icon-button class="btn-secondary" href="#" routerLink="admin" *ngIf="showAdminBoard">
+              Admin Board
+            </button></div>
+          <div>
+            <button mat-icon-button class="btn-secondary" href="#" (click)="slide()" routerLink="mod" *ngIf="showParticipantBoard">
+              Participant Board
+            </button></div>
+        </div>
+        <div *ngIf="!isLoggedIn" class="col-12 header">
+          <div class="row">
+            <div class="col-2">
+
+              <button (click)="onToggleSidenav()">
+                <mat-icon>menu</mat-icon>
+              </button>
+
+            </div>
+            <div class="col-2">
+              <div>
+                <button mat-icon-button class="login2" routerLink="connexion" (click)="login()">
+                  <img src="./../../../assets/login.png" class="img-fluid login3" alt="" srcset="">
+                </button></div>
+            </div>
+            <div class="col-2">
+              <div>
+                <button mat-icon-button class="login" routerLink="register" (click)="login()">
+                  <img src="./../../../assets/login_in-128.png" class="img-fluid" alt="" srcset="">
+                </button></div>
+            </div>
+            <div class="col-2">
+              <div>
+                <button mat-icon-button class="login" routerLink="register" (click)="login()">
+                  <img src="./../../../assets/facebook.png" class="img-fluid" alt="" srcset="">
+                </button></div>
+            </div>
+            <div class="col-2">
+              <div>
+                <button mat-icon-button class="login" routerLink="register" (click)="login()">
+                  <img src="./../../../assets/twitter.png" class="img-fluid" alt="" srcset="">
+                </button></div>
+            </div>
+            <div class="col-2">
+              <div>
+                <button mat-icon-button class="login" routerLink="register" (click)="login()">
+                  <img src="./../../../assets/youtube.png" class="img-fluid" alt="" srcset="">
+                </button></div>
+            </div>
+
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+
+      <div class="col-12" *ngIf="isLoggedIn">
+        <button mat-icon-button class="btn-secondary" href="/profile" routerLink="profile">
+          {{ username }}
+        </button>
+        <button mat-icon-button class="btn-secondary" (click)="logout()">
+          LogOut
+        </button>
+        <div>
+          <button mat-icon-button class="login" routerLink="register" (click)="login()">
+            <img src="./../../../assets/facebook.png" class="img-fluid" alt="" srcset="">
+          </button></div>
+        <div>
+          <button mat-icon-button class="login" routerLink="register" (click)="login()">
+            <img src="./../../../assets/twitter.png" class="img-fluid" alt="" srcset="">
+          </button></div>
+        <div>
+          <button mat-icon-button class="login" routerLink="register" (click)="login()">
+            <img src="./../../../assets/youtube.png" class="img-fluid" alt="" srcset="">
+          </button></div>
+      </div>
+
+    </div>
+
+
+
+  </div>
 </div>
 
 <!-- <div>

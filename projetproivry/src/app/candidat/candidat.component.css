@@ -1,0 +1,13 @@
+.container-fluid {
+  height: 100vh;
+  padding: 2%;
+  padding-left: 10%
+}
+
+.article {
+  background-color: #7a3e33;
+  height: 80vh;
+  margin-top: 2%;
+  padding: 2%;
+  overflow-y: scroll;
+}

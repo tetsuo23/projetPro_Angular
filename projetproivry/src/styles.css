@@ -3,7 +3,7 @@
 
 html,
 body {
-  height: 200vh;
+  height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -13,15 +13,23 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-html,
-body {
-  height: 100%;
-}
+
 
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+mat-sidenav-container {
+  width: 60%;
+  background: transparent;
+}
+
+.mat-drawer-inner-container .mat-drawer-container .mat-drawer-backdrop .mat-drawer-shown {
+  background: transparent !important;
+  background-color: transparent !important
+}
+
 
 
 
@@ -35,7 +43,7 @@ body {
 .mat-typography h2 {
   font-family: 'Montserrat', sans-serif;
   z-index: 99;
-
+  font-size: 2.3rem;
 }
 
 .mat-typography h3 {
@@ -56,10 +64,20 @@ body {
   left: 60px
 }
 
-@media screen and (min-width:1281px) {
-  .mat-typography h2 {}
+@media screen and (min-width:961px) {
+
 
   .mat-drawer-inner-container {
     overflow: hidden !important;
+  }
+
+  mat-sidenav-container {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width:1281px) {
+  mat-sidenav-container {
+    width: 25%;
   }
 }

@@ -32,4 +32,9 @@ export class SidenavListComponent implements OnInit {
     document.getElementById('ent').style.display = 'none';
     document.getElementById('real').style.display = 'none';
   }
+  to5() {
+    document.getElementById("section5").scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById('ent').style.display = 'none';
+    document.getElementById('real').style.display = 'none';
+  }
 }

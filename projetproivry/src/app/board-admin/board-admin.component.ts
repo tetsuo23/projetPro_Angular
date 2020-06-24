@@ -26,7 +26,8 @@ export class BoardAdminComponent implements OnInit {
   users: User[];
   posts: Post[];
 
-  constructor(private userService: UserService, private tokenStorageService: TokenStorageService, private bs: BoardAdminService, private ps: PostService, private router: Router) { }
+  constructor(private userService: UserService,
+    private tokenStorageService: TokenStorageService, private ps: PostService) { }
   // deletePost(id: any, index: number) {
   //   this.ps.deletePost(id).subscribe(res => {
   //     this.posts.splice(index, 1);
@@ -59,7 +60,7 @@ export class BoardAdminComponent implements OnInit {
 
       });
 
-    this.bs
+    this.ps
       .getPosts()
       .subscribe((data: Post[]) => {
         this.posts = data;

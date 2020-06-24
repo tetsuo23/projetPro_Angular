@@ -9,16 +9,20 @@ body {
 #firstVideo {
   /* height: 100vh; */
   width: 100vw;
-  position: relative;
-  background-size: cover;
+  position: absolute;
   /* background-position: center center; */
   z-index: 2;
   animation: video 10s ease-out;
   display: block;
+  left: 0;
+  top: 0;
+}
+
+#landing {
+  padding-top: 30px
 }
 
 #cut {
-  /* height: 100vh; */
   width: 100%;
   position: absolute;
   top: 0;
@@ -32,23 +36,18 @@ body {
 
 h1 {
   position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0%;
+  left: 0%;
   color: antiquewhite;
-  font-size: 4em;
+  font-size: 3em;
   font-family: 'Play', sans-serif;
-
   z-index: 999;
   animation: titre 10s ease-in;
-
-  margin-right: 52px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #FFF;
-  padding-left: 25%;
   /*decalage du titre par rapport au soulignement*/
-  width: 60%;
+  width: 100%;
 }
 
 h2 {
@@ -57,19 +56,15 @@ h2 {
   left: 50%;
   transform: translateX(-50%);
   color: antiquewhite;
-
-
   z-index: 999;
   animation: titre2 10s ease-in;
 }
 
 @keyframes titre {
   0% {
-
     opacity: 0;
     transform: translateX(-50%);
     /* left:10%; */
-
   }
 
   80% {
@@ -79,14 +74,10 @@ h2 {
   }
 
   90% {
-
     opacity: 1;
     font-size: 4.5;
     animation-timing-function: ease-in-out;
   }
-
-
-
 }
 
 @keyframes titre2 {
@@ -242,3 +233,24 @@ a:hover span:nth-child(4) {
   transition: 1s;
   transition-delay: 0.75s;
 }
+
+@media screen and (min-width:961px) {
+
+  /* #first,
+  #firstVideo {
+    left: -13.3%;
+  } */
+
+  h1 {
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4em;
+    margin-right: 52px;
+    padding-left: 25%;
+    /*decalage du titre par rapport au soulignement*/
+    width: 60%;
+  }
+}
+
+@media screen and (min-width:1281px) {}

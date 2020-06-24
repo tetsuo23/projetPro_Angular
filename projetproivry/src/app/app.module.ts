@@ -30,6 +30,7 @@ import { PostEditComponent } from './post-edit/post-edit.component';
 import { IndexComponent } from './index/index.component';
 import { WebsocketService } from './_services/websocket.service';
 import { ActualiteComponent } from './actualite/actualite.component';
+import { CandidatComponent } from './candidat/candidat.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ActualiteComponent } from './actualite/actualite.component';
     PostCreateComponent,
     PostEditComponent,
     IndexComponent,
-    ActualiteComponent
+    ActualiteComponent,
+    CandidatComponent
   ],
   imports: [
     BrowserModule,
